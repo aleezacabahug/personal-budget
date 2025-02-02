@@ -13,13 +13,13 @@
 
 <a href="#main" class="skip">Skip to content</a>
 
-<header> <!-- Semantic change 1: Using header -->
-    <nav>
+<header role="banner"> <!-- Semantic change and A11y change 1: Using header and added a role -->
+    <nav class="high-contrast"> <!-- A11y change 2: Using bold text to outline titles. (Can be seen in the main.css file too)-->
         <ul>
-            <li><a href="/">Homepage</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
+            <li><a href="/" tabindex="1">Homepage</a></li> <!-- A11y change 3: Adding tab index for better keyboard integration -->
+            <li><a href="/about.html" tabindex="2">About</a></li>
+            <li><a href="/login.html" tabindex="3">Login</a></li>
+            <li><a href="https://google.com" tabindex="4">Google</a></li>
         </ul>
     </nav>
 
@@ -92,7 +92,7 @@
         <article>
             <h1>Chart</h1>
             <p>
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <canvas id="myChart" width="400" height="400" aria-label="Budget distribution chart"></canvas> <!-- A11y change 1: Added ARIA label -->
             </p>
         </article>
 
